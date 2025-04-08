@@ -40,7 +40,7 @@ class Layer(Module):
         return [p for n in self.neurons for p in n.parameters()]
 
     def __repr__(self):
-        return f"Layer of [{', '.join(str(n) for n in self.neurons)}]"
+        return f"Layer of {len(self.neurons)} [{', '.join(str(n) for n in self.neurons)}]"
 
 class MLP(Module):
 
